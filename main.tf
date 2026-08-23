@@ -69,6 +69,7 @@ resource "helm_release" "flux_operator" {
   namespace        = kubernetes_namespace_v1.flux_system.metadata[0].name
   repository       = var.flux_chart_repository
   chart            = var.flux_operator_chart_name
+  version          = var.flux_operator_chart_version
   create_namespace = false
   wait             = var.flux_helm_wait
   wait_for_jobs    = var.flux_helm_wait_for_jobs
@@ -84,6 +85,7 @@ resource "helm_release" "flux_instance" {
   namespace        = kubernetes_namespace_v1.flux_system.metadata[0].name
   repository       = var.flux_chart_repository
   chart            = var.flux_instance_chart_name
+  version          = var.flux_instance_chart_version
   create_namespace = false
   wait             = var.flux_helm_wait
   wait_for_jobs    = var.flux_helm_wait_for_jobs

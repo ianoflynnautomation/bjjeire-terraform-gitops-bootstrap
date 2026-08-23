@@ -201,6 +201,13 @@ variable "flux_operator_chart_name" {
   nullable    = false
 }
 
+variable "flux_operator_chart_version" {
+  type = string
+  default     = "0.58.1"
+  description = "flux-operator Helm chart version. Keep in lockstep with flux_instance_chart_version and the flux-operator-manifests artifact tag."
+  nullable    = false
+}
+
 variable "flux_instance_release_name" {
   type        = string
   default     = "flux"
@@ -212,6 +219,13 @@ variable "flux_instance_chart_name" {
   type        = string
   default     = "flux-instance"
   description = "Chart name for the flux-instance release."
+  nullable    = false
+}
+
+variable "flux_instance_chart_version" {
+  type = string
+  default     = "0.58.1"
+  description = "flux-instance Helm chart version. Keep in lockstep with flux_operator_chart_version and the flux-operator-manifests artifact tag."
   nullable    = false
 }
 

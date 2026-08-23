@@ -2,7 +2,7 @@ instance:
   distribution:
     version: ${flux_version}
     registry: ${flux_registry}
-    artifact: "oci://ghcr.io/controlplaneio-fluxcd/flux-operator-manifests:v0.52.0"
+    artifact: "oci://ghcr.io/controlplaneio-fluxcd/flux-operator-manifests:v0.58.1"
   components:
     - source-controller
     - kustomize-controller
